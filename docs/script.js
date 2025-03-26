@@ -161,7 +161,7 @@
             // make balloon height relative to screen size for this nice bokeh/perspective effect
             var balloonHeight = Math.floor(Math.min(sceneSize.width, sceneSize.height) * 1);
             var balloonWidth = (balloonDefaultSize.width / balloonDefaultSize.height) * balloonHeight;
-            var amount = Math.max(7, Math.round(containerWidth / (balloonWidth / 2)));
+            var amount = Math.max(18, Math.round(containerWidth / (balloonWidth / 2)));
             // make max dist depend on number of balloons and their size for realistic effect
             // we dont want them to be too separated or too squeezed together
             var maxDist = Math.max((amount * balloonWidth) / 2, (balloonWidth / 2) * 10);
@@ -222,10 +222,24 @@
     }
 
     document.addEventListener("DOMContentLoaded", function () {
-        balloons();
+        balloons(undefined, [
+            // red
+            ["#f89640ee", "#eb002bff"],
+            // Black
+            ["#384f5cee", "#1b1b26ff"],
+            // Slate
+            ["#668393EE", "#384f5cee"],
+        ]);
         var button = document.getElementById("releastBalloonsButton");
         button === null || button === void 0 ? void 0 : button.addEventListener("click", function () {
-            balloons();
+            balloons(undefined, [
+                // red
+                ["#f89640ee", "#eb002bff"],
+                // Black
+                ["#384f5cee", "#1b1b26ff"],
+                // Slate
+                ["#668393EE", "#384f5cee"],
+            ]);
         });
     });
 

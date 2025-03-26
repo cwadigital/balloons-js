@@ -142,7 +142,7 @@ export function balloons(container?: HTMLElement, customColorPairs?: BalloonColo
     const balloonWidth =
       (balloonDefaultSize.width / balloonDefaultSize.height) * balloonHeight;
     let amount = Math.max(
-      7,
+      18,
       Math.round(containerWidth / (balloonWidth / 2))
     );
     // make max dist depend on number of balloons and their size for realistic effect
